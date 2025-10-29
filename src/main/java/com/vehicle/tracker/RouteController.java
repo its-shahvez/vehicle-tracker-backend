@@ -16,7 +16,7 @@ public class RouteController {
     @GetMapping("/route")
     // @CrossOrigin is CRITICAL. It allows our React app (on port 5173)
     // to request data from this Spring Boot server (on port 8080).
-    @CrossOrigin(origins = "http://localhost:5173")
+    @CrossOrigin(origins = "*")
     public List<RoutePoint> getVehicleRoute() {
         // We are hard-coding the dummy route data here,
         // just like in the 'dummy-route.json' example.
