@@ -10,6 +10,8 @@ COPY .mvn/ .mvn
 COPY mvnw .
 COPY pom.xml .
 
+RUN chmod +x mvnw
+
 # केवल ज़रूरी निर्भरता (dependencies) डाउनलोड करें
 RUN ./mvnw dependency:go-offline
 
